@@ -1,0 +1,22 @@
+CREATE VIEW applicant_vacancyView AS
+SELECT  Date_Posted,
+        Closing_Date,
+        Work_Type,
+        Salary,
+        Hours,
+        Contract_Length,
+        Job_Title,
+        Job_Description,
+        Company_Name,
+        Company_Logo,
+        House,
+        Street,
+        City,
+        Postcode
+        
+        
+        
+        
+FROM job_vacancy 
+JOIN company ON job_vacancy.Company_ID = company.Company_ID 
+JOIN address ON company.Address = Address.Address_ID
